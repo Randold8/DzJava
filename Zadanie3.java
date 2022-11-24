@@ -12,14 +12,29 @@ public class Zadanie3 {
             System.exit(1);
         }
         double result = 1;
-        for (int i = 1; i <= n; i++) {
-            result *= x;
+        if (n < 0) {
+            for (int i = 0; i > n; i--) {
+                result *= x;
+            }
+            result = 1 / result;
+        } else {
+            for (int i = 0; i < n; i++) {
+                result *= x;
+            }
         }
         double result2 = 1;
-        int i = 1;
-        while (i <= n) {
-            result2 *= x;
-            i++;
+        int i = 0;
+        if (n < 0) {
+            while (i > n) {
+                result2 *= x;
+                i--;
+            }
+            result2 = 1 / result2;
+        } else {
+            while (i < n) {
+                result2 *= x;
+                i++;
+            }
         }
         System.out.println("Result using for loop: " + result);
         System.out.println("Result using while loop: " + result2);
