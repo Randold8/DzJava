@@ -39,6 +39,10 @@ public class Zadanie1 {
             System.out.println("Incorrect day!");
             System.exit(0);
         }
+        if(day > 29 && month == 2) {
+            System.out.println("Incorrect day!");
+            System.exit(0);
+        }
         if (day == 29 && month == 2) {
             //check for leap year
             if (year % 4 != 0) {
