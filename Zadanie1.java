@@ -17,6 +17,10 @@ public class Zadanie1 {
         int current_month = current_date.getMonthValue();
         int current_day = current_date.getDayOfMonth();
         int age_year = current_year - year;
+        if age_year < 0 {
+            System.out.println("You are not born yet!");
+            System.exit(0);
+        }
         int age_month = current_month - month;
         int age_day = current_day - day;
         if (age_month < 0) {
