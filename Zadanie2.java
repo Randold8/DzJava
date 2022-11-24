@@ -22,22 +22,22 @@ public class Zadanie2 {
     }
     public static void DayChecker(int day, int month) {
         if (day < 1 || day > 31) {
-            System.out.println("Incorrect day!");
-            System.exit(0);
+            IncorrectInput();
         }
         if (day == 31 && (month == 2 || month == 4 || month == 6 || month == 9 || month == 11)) {
-            System.out.println("Incorrect day!");
-            System.exit(0);
+            IncorrectInput();
         }
         if (day == 30 && month == 2) {
-            System.out.println("Incorrect day!");
-            System.exit(0);
+            IncorrectInput();
         }
     }
     public static void MonthChecker(int month) {
         if (month < 1 || month > 12) {
-            System.out.println("Incorrect month!");
-            System.exit(0);
+            IncorrectInput();
         }
+    }
+    public static void IncorrectInput() {
+        System.out.println("Incorrect input!");
+        System.exit(0);
     }
 }

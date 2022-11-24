@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.io.PrintStream;
 import java.time.LocalDateTime;
 public class Zadanie1 {
     public static void main(String[] args) {
@@ -32,33 +33,31 @@ public class Zadanie1 {
     }
     public static void DayChecker(int day, int month, int year) {
         if (day < 1 || day > 31) {
-            System.out.println("Incorrect day!");
-            System.exit(0);
+            IncorrectInput();
         }
         if (day == 31 && (month == 2 || month == 4 || month == 6 || month == 9 || month == 11)) {
-            System.out.println("Incorrect day!");
-            System.exit(0);
+            IncorrectInput();
         }
         if(day > 29 && month == 2) {
-            System.out.println("Incorrect day!");
-            System.exit(0);
+            IncorrectInput();
         }
         if (day == 29 && month == 2) {
             //check for leap year
             if (year % 4 != 0) {
-                System.out.println("Incorrect day!");
-                System.exit(0);
+                IncorrectInput();
             }
             if (year % 100 == 0 && year % 400 != 0) {
-                System.out.println("Incorrect day!");
-                System.exit(0);
+                IncorrectInput();
             }
         }
     }
     public static void MonthChecker(int month) {
         if (month < 1 || month > 12) {
-            System.out.println("Incorrect month!");
-            System.exit(0);
+            IncorrectInput();
         }
+    }
+    public static void IncorrectInput() {
+        System.out.println("Incorrect input!");
+        System.exit(0);
     }
 }
