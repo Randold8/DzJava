@@ -6,7 +6,7 @@ public class Zadanie1 {
         System.out.println("Print your birth year: ");
         int year = scanner.nextInt();
         System.out.println("Print your birth month (1-12): ");
-        int month = scanner.nextInt();
+        byte month = scanner.nextByte();
         MonthChecker(month);
         System.out.println("Print your birth day (1-31): ");
         int day = scanner.nextInt();
