@@ -3,7 +3,7 @@ public class Zadanie2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter month: ");
-        int month = scanner.nextInt();
+        byte month = scanner.nextByte();
         MonthChecker(month);
         System.out.println("Enter day: ");
         int day = scanner.nextInt();
@@ -20,7 +20,7 @@ public class Zadanie2 {
         }
 
     }
-    public static void DayChecker(int day, int month) {
+    public static void DayChecker(int day, byte month) {
         if (day < 1 || day > 31) {
             IncorrectInput();
         }
@@ -31,7 +31,7 @@ public class Zadanie2 {
             IncorrectInput();
         }
     }
-    public static void MonthChecker(int month) {
+    public static void MonthChecker(byte month) {
         if (month < 1 || month > 12) {
             IncorrectInput();
         }
