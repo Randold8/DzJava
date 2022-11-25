@@ -11,6 +11,10 @@ public class Zadanie3 {
             System.out.println("n has to be within (-15;15)");
             System.exit(1);
         }
+        if (x<0) {
+            x = -x;
+        }
+        //For loop
         double result = 1;
         if (n < 0) {
             for (int i = 0; i > n; i--) {
@@ -22,6 +26,7 @@ public class Zadanie3 {
                 result *= x;
             }
         }
+        //While loop
         double result2 = 1;
         int i = 0;
         if (n < 0) {

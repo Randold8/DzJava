@@ -38,6 +38,6 @@ public class Zadanie2 {
     }
     public static void IncorrectInput() {
         System.out.println("Incorrect input!");
-        System.exit(0);
+        System.exit(1);
     }
 }
